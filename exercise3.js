@@ -197,3 +197,5 @@ function isPalindrome(word) {
     const replacedOutput = replaceLetterA(input);
     
     console.log(replacedOutput);
+
+    // selesai
