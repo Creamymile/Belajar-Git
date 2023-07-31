@@ -83,4 +83,4 @@ function removeOddNumbers(arr) {
     const numbers2 = [1, 2, 3, 4, 5, 6, 7, 10];
     const evenNumbers = removeOddNumbers(numbers2);
 
-console.log(evenNumbers)
+console.log(evenNumbers);
