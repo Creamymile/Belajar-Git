@@ -99,3 +99,5 @@ function calculateStudentData(students) {
   console.log('\nAge Stats:');
   console.log(`Highest: ${calculateAge(ageStats.highest, new Date())}, Lowest: ${calculateAge(ageStats.lowest,new Date())}, Average: ${ageStats.average}`
   );
+
+  // Selesai 
