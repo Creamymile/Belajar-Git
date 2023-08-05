@@ -100,4 +100,51 @@ function calculateStudentData(students) {
   console.log(`Highest: ${calculateAge(ageStats.highest, new Date())}, Lowest: ${calculateAge(ageStats.lowest,new Date())}, Average: ${ageStats.average}`
   );
 
-  // Selesai 
+  // No. 2 Transaction program
+
+  class Product {
+    constructor(name, price) {
+      this.name = name;
+      this.price = price;
+    }
+  }
+  
+  class Transaction {
+    constructor() {
+      this.products = [];
+      this.total = 0;
+    }
+  
+    addToCart(product, qty) {
+      this.products.push({ product, qty });
+      this.total += product.price * qty;
+    }
+  
+    showTotal() {
+      console.log(`Total: $${this.total.toFixed(2)}`);
+    }
+  
+    checkout() {
+      console.log("Finalizing Transaction:");
+      for (const item of this.products) {
+        console.log(`${item.qty}x ${item.product.name} - $${(item.product.price * item.qty).toFixed(2)}`);
+      }
+      this.showTotal();
+      console.log("Transaction finalized.");
+    }
+  }
+  
+  const apple = new Product("Apple", 0.5);
+  const banana = new Product("Banana", 0.3);
+  const orange = new Product("Orange", 0.6);
+  
+  
+  const transaction = new Transaction();
+  transaction.addToCart(apple, 3);
+  transaction.addToCart(banana, 5);
+  transaction.addToCart(orange, 2);
+  
+  
+  transaction.showTotal();
+  transaction.checkout();
+  
