@@ -148,3 +148,4 @@ function calculateStudentData(students) {
   transaction.showTotal();
   transaction.checkout();
   
+  // Selesai
