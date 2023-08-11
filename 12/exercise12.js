@@ -1,6 +1,22 @@
 // Exercise
 // No 1
 
+function getColumnNumber(columnTitle) {
+  columnTitle = columnTitle.toUpperCase();
+  let columnNumber = 0;
+  const base = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  for (const char of columnTitle) {
+    columnNumber = columnNumber * 26 + base.indexOf(char) + 1;
+  }
+
+  return columnNumber;
+}
+
+const columnTitle = "AB";
+const columnNumber = getColumnNumber(columnTitle);
+console.log(columnNumber);
+
 // No 2 Given a non-empty array of integers nums, ever element appears twice except for one. find that single one
 
 function findSingleNumber(nums) {
